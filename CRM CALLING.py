@@ -173,8 +173,7 @@ for i, row in df.iterrows():
             ist = pytz.timezone("Asia/Kolkata")
             # timestamp = datetime.now(ist).strftime("%d-%b-%Y %H:%M:%S")
             timestamp = datetime.now(ist).strftime("%Y-%m-%d %H:%M:%S")
-            %Y-%m-%d %H:%M:%S
-
+            
             new_row = [
                 safe_value(row["PARTY NAME"]),
                 safe_value(row["AGENT NAME"]),
