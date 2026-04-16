@@ -3,6 +3,8 @@ import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
+from datetime import datetime
+import pytz
 
 # -------------------------
 # CONFIG
@@ -167,7 +169,9 @@ for i, row in df.iterrows():
     with col3:
         if st.button("CALL DONE", key=f"btn_{i}"):
 
-            timestamp = datetime.now().strftime("%d-%b-%Y %H:%M:%S")
+            # timestamp = datetime.now().strftime("%d-%b-%Y %H:%M:%S")
+            ist = pytz.timezone("Asia/Kolkata")
+            timestamp = datetime.now(ist).strftime("%d-%b-%Y %H:%M:%S")
 
             new_row = [
                 safe_value(row["PARTY NAME"]),
