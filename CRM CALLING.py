@@ -186,7 +186,8 @@ for i, row in df.iterrows():
                 safe_value(remark)
             ]
 
-            store.append_row(new_row)
+            # store.append_row(new_row)
+            store.append_row(new_row, value_input_option="USER_ENTERED")
 
             st.success("Stored Successfully ✅")
 
